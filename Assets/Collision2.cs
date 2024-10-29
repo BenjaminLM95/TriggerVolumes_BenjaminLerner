@@ -2,20 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision1 : MonoBehaviour
+public class Collision2 : MonoBehaviour
 {
-    public GameObject _gameObject; 
+    public GameObject _gameObject;
 
 
     private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player")) 
-        {
-            _gameObject.SetActive(true); 
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -23,4 +15,11 @@ public class Collision1 : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _gameObject.SetActive(true);
+        }
+    }
 }
